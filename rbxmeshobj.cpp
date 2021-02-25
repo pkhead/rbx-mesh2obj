@@ -78,16 +78,9 @@ bool convert(char* sourcePath, std::ifstream& inputFile, std::ofstream& outputFi
         int i_currTuple = 0;
         char currChar;
         std::string tupleVal;
-
-        int CCC = 20;
-
+        
         while (inputFile.peek() != EOF) {
             inputFile >> currChar;
-            CCC++;
-
-            if (CCC >= 223455) {
-                CCC = CCC + 1 - 1;
-            }
 
             if (currChar == ']') {
                 tuples[n_currTuple++] = Tuple{ currTuple[0], currTuple[1], std::stod(tupleVal) };
